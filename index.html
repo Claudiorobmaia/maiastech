@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
@@ -12,41 +13,58 @@
 </head>
 
 <body>
+
+    <!-- ================= HEADER ================= -->
     <header class="header">
-        <div>
-            
-                <div class="search-container">
-                    <!--<img src="./assets/logo.jpeg" alt="logo Maia's Tech" class="logo">--> 
-                    <input type="text" id="searchInput" placeholder="Buscar produtos..." class="search-input">
-                    <button id="searchBtn" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
+        <div class="search-container">
+            <!-- Se quiser usar a logo depois, só remover o comentário -->
+            <!-- <img src="./assets/logo.jpeg" alt="logo Maia's Tech" class="logo"> -->
+            <input type="text" id="searchInput" placeholder="Buscar produtos..." class="search-input">
+            <button id="searchBtn" class="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
         </div>
     </header>
+
+
+    <!-- ================= HERO ================= -->
     <section class="hero">
-        <!--<h1>Ofertas Imperdíves</h1>
-        <p>Encontre os melhores produtos com descontos incríveis!</p>-->>
+        <!-- Conteúdo opcional -->
+        <!--
+        <h1>Ofertas Imperdíveis</h1>
+        <p>Os melhores produtos com descontos incríveis!</p>
+        -->
     </section>
+
+
+    <!-- ================= MAIN ================= -->
     <main class="main">
         <div class="container">
+
             <h2 class="section-title">Ofertas</h2>
-            <div class="products-grid" id="productsGrid" >
-                <!--Produtos que serão inseridos pelo javascript-->
-                 <div class="product-card">
-                    <img alt="" class="product-image">
-                    <h3 class="product-title"></h3> 
+
+            <!-- grade de produtos preenchida pelo JavaScript -->
+            <div class="products-grid" id="productsGrid">
+
+                <!-- estrutura base do cartão -->
+                <div class="product-card">
+                    <img class="product-image" alt="">
+                    <h3 class="product-title"></h3>
                     <div class="product-price"></div>
-                    <div class="product-discount"></div>         
+                    <div class="product-discount"></div>
+                </div>
 
-
-        </div>
             </div>
         </div>
-
     </main>
+
+
+    <!-- ================= FOOTER ================= -->
     <footer class="footer">
         <p>&copy; 2024 Maia's Tech. Todos os direitos reservados.</p>
     </footer>
-    <script src="./scripts.js"></script>
-</body>
 
+    <script src="./scripts.js"></script>
+
+</body>
 </html>
