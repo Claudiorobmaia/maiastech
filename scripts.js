@@ -42,7 +42,7 @@ function createProductCard(product) {
                         <img src="${product.image}" alt="${product.title}" class="product-image">
                             <h3 class="product-title">${product.title}</h3> 
                             <div class="product-price">${formatPrice(product.price)}</div>
-                            <div class="product-discount">${product.discount}% Off</div> 
+                            <!--<div class="product-discount">${product.discount}% Off</div> -->
                 </div>
             `
 

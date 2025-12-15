@@ -114,11 +114,12 @@ body {
     margin-bottom: 5px;
 }
 
-.product-discount {
+/*.product-discount {
     font-size: 14px;
     color: #00ff62;
     font-weight: bold;
 }
+*
 
 /* ========================= HERO ========================= */
 .hero {
