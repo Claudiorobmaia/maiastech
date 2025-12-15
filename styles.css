@@ -1,10 +1,33 @@
+@keyframes neonPulse {
+    0% {
+        text-shadow:
+            0 0 6px rgba(74, 206, 22, 0.6),
+            0 0 20px rgba(74, 206, 22, 0.4);
+    }
+
+    50% {
+        text-shadow:
+            0 0 12px rgba(74, 206, 22, 1),
+            0 0 35px rgba(74, 206, 22, 0.9),
+            0 0 70px rgba(74, 206, 22, 0.7);
+    }
+
+    100% {
+        text-shadow:
+            0 0 6px rgba(74, 206, 22, 0.6),
+            0 0 20px rgba(74, 206, 22, 0.4);
+    }
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    font-family: Arial, sans-serif;
+   font-family: 'Inter', sans-serif;
     background-color: #f5f5f5;
 }
 
@@ -84,7 +107,7 @@ body {
 
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 10px #4c53af;
 }
 
 .product-image {
@@ -121,25 +144,82 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-color: #000;
-    height: 500px;
+    background-color: #000000;
+    height: 450px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;    /* topo */
+    align-items: center;          /* centro horizontal */
+     background-color: #000;
+    height: 450px;
+   }
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* esquerda | centro | direita */
+    height: 100%;
+    width: 100%;
+}
+
+.hero-side {
+    display: flex;
     align-items: center;
-    color: white;
+    justify-content: center;
+}
+
+
+
+.hero-left {
+    background-image: url("./assets/placavideoneon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+.hero-right {
+    background-image: url("./assets/ps5neon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.hero-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding-bottom: 50px;
+    color: white;
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    color: #ffffff;
+    margin-bottom: 100px;
+    text-shadow:
+        0 0 8px rgba(0, 255, 100, 1),
+        0 0 25px rgba(0, 255, 100, 0.9),
+        0 0 60px rgba(0, 255, 100, 0.7),
+        0 0 120px rgba(0, 255, 100, 0.5);
+        animation: neonPulse s ease-in-out infinite;
 }
 
+
 .hero p {
-    font-size: 24px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 2px; /* espaço do rodapé */
+    color: white;
+    padding: 130px;
+    text-shadow:
+        0 0 6px rgba(0, 150, 255, 0.6)
 }
+
 
 /* ========================= FOOTER ========================= */
 .footer {
@@ -153,6 +233,23 @@ body {
 .footer p {
     color: #777777;
     font-size: 14px;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.whatsapp-button img {
+    width: 50px;
+    height: 50px;
 }
 
 /* ==========================================================
@@ -178,17 +275,21 @@ body {
     }
 
     .hero {
-        height: 350px;
+        height: 500px;
         background-size: cover;
         padding-bottom: 20px;
     }
 
-    .hero h1 {
-        font-size: 32px;
-    }
+    .hero-content h1 {
+    font-size: 38px;
+    color: rgb(140, 88, 236);
+    margin-top: 10px;
+    text-align: center;
+}
 
     .hero p {
-        font-size: 18px;
+        font-size: 28px;
+        display: none;
     }
 }
 
@@ -205,7 +306,8 @@ body {
     }
 
     .products-grid {
-        grid-template-columns: 1fr; /* apenas 1 produto por linha */
+        grid-template-columns: 1fr;
+        /* apenas 1 produto por linha */
     }
 
     .product-image {
@@ -217,11 +319,15 @@ body {
         background-size: cover;
     }
 
-    .hero h1 {
-        font-size: 24px;
-    }
+    .hero-content h1 {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1000px;
+    text-align: center;
+}
 
     .hero p {
-        font-size: 16px;
+        font-size: 12px;
+        padding: 50px;
     }
 }
