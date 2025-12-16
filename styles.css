@@ -87,7 +87,7 @@ body {
 /* dropdown */
 .sac-dropdown {
     position: absolute;
-    top: 100%;          /* gruda abaixo do botão */
+    top: 40px;          /* gruda abaixo do botão */
     left: 0;
     width: 260px;
     background: #fff;
