@@ -51,6 +51,94 @@ body {
     background-color: #e0e0e0;
 }
 
+ /* ========================= SAC DROPDOWN ========================= */
+
+.menu-sac {
+    position: relative;
+    display: inline-block;
+}
+
+/* botão */
+.sac-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #ffffff;
+}
+.arrow {
+    font-size: 15px;
+    transition: transform 0.2s ease;
+}
+
+
+
+.sac-btn i {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+/* gira a setinha quando abre */
+.menu-sac:hover .arrow {
+    transform: rotate(180deg);
+}
+
+/* dropdown */
+.sac-dropdown {
+    position: absolute;
+    top: 100%;          /* gruda abaixo do botão */
+    left: 0;
+    width: 260px;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-radius: 6px;
+    
+
+    /* escondido */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+}
+
+/* quando passar o mouse no CONTAINER */
+.menu-sac:hover .sac-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.sac-dropdown::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+.sac-content h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+
+.sac-content h4 {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.sac-content strong {
+    display: block;
+    color: #4c53af;
+    margin-bottom: 10px;
+}
+.sac-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
 /* ========================= CONTAINER ========================= */
 .container {
     max-width: 1200px;
@@ -242,6 +330,18 @@ body {
 
 /* 768px — Tablets e celulares maiores */
 @media (max-width: 768px) {
+
+    .sac-dropdown {
+        position: fixed;        /* solta do header */
+        top: 70px;              /* abaixo do topo */
+        left: 70%;
+        transform: translateX(-50%);
+        width: 50%;
+        max-width: 360px;
+        z-index: 9999;
+    }
+
+
     .header {
         flex-direction: column;
         padding: 20px;
@@ -272,6 +372,12 @@ body {
 
 /* 480px — Celulares */
 @media (max-width: 480px) {
+
+    /* MOBILE: clique */
+.sac-dropdown.ativo {
+    opacity: 1;
+    visibility: visible;
+}
 
     .search-container {
         flex-direction: row;

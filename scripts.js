@@ -23,7 +23,10 @@ async function loadProducts() {
     }
 }
 
-
+function toggleSac() {
+    document.getElementById("sacMenu")
+        .classList.toggle("ativo");
+}
 
 
 // função para formatar o preço / format
