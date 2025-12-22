@@ -359,6 +359,9 @@ body {
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+        .brand-bar {
+    display: none;
+}
 }
 
 /* 768px — Tablets e celulares maiores */
@@ -401,7 +404,13 @@ body {
         font-size: 28px;
         display: none;
     }
+
+    .brand-bar {
+    display: none;
 }
+
+}
+
 
 /* 480px — Celulares */
 @media (max-width: 480px) {
@@ -446,4 +455,7 @@ body {
         font-size: 12px;
         padding: 50px;
     }
+        .brand-bar {
+    display: none;
+}
 }
