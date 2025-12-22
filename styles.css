@@ -159,6 +159,39 @@ body {
     font-weight: 400;
     color: gray
 }
+/* ========================= BARRA DE MARCAS ========================= */
+.brand-bar {
+  width: 100%;
+  height: 40px; /* pode testar 15px */
+  background: linear-gradient(90deg, #0b0f1a, #0e1325);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.brand-track {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.brand-track img {
+  height: 50px; /* menor que a barra */
+}
+
+.brand-track img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.brand-track img {
+  
+  opacity: 0.7;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
 
 /* ========================= GRID DE PRODUTOS ========================= */
 .products-grid {
