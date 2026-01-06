@@ -6,7 +6,8 @@ fetch("https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLi
 
 
 async function loadProducts() {
-    const url = "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLiO6Xn2q-OCzDuJ6f27u7OUiXaxdzpFmwp9XWbVhLEghHXUuHgkyqeZA7v1QmWLIh-BFasJzEAhH4xHp5eIczslfBRM-Jg0TYNUJov0nglSJ4l1neAFk5iYlgXDBD3-YGPf0rpxOHtkV6-jcFu-XrakJBTrzN-ECTp2hLGN8ZQLyih5aJY9XLxX3VsgJLc6b_6-NO7f-DfVbmPgmyEgUr-etU4zp-zqrlwzlk8VJtCAPK5YX_qcEDkDzBYu4eqa85Q6wi-eRtktOWt77iSXpxhgnDV4om-ndxMZJnqd&lib=Mv7EnEuUGMAiK1hBlhr26h8mSUAaZU9Z8";
+    const url = "https://script.google.com/macros/s/AKfycbyZATzsVJ0t9jicUBaDgYJwP8G11Kv2s9ZHMUWmo94eTBEnt4BeJp7NdiXBKpj6fdAmOw/exec";
+    
 
     try {
         const response = await fetch(url);
@@ -45,6 +46,7 @@ function createProductCard(product) {
                         <img src="${product.image}" alt="${product.title}" class="product-image">
                             <h3 class="product-title">${product.title}</h3> 
                             <div class="product-price">${formatPrice(product.price)}</div>
+                            <p class="product-description">${product.description || ""}</p>
                             <!--<div class="product-discount">${product.discount}% Off</div> -->
                 </div>
             `
