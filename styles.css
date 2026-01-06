@@ -235,6 +235,13 @@ body {
     margin-bottom: 5px;
 }
 
+.product-description {
+    font-size: 13px;
+    color: #949494;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
 /*.product-discount {
     font-size: 14px;
     color: #00ff62;
